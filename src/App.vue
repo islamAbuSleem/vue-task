@@ -1,12 +1,30 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link :to="{name:'countries'}">Countries</router-link> |
+    <router-link :to="{name:'cities'}">Cities</router-link>
   </div>
   <router-view/>
 </template>
 
 <style lang="scss">
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: 768px) {
+      width: 750px;
+    }
+    @media (min-width: 992px) {
+      width: 970px;
+    }
+    @media (min-width: 1200px) {
+      width: 1170px;
+    }
+
+
+
+  }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
